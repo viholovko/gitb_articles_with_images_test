@@ -1,7 +1,10 @@
 # Articles with Images
 
-This repository contains a subset of a Ruby on Rails app.    
-`Articles` are a type of `Posting`. Other types of Postings include `Questions` and `ProductReviews`. Postings have a `body` attribute, where the content of the Posting is stored as raw html. Some Postings have images embedded within the text of the Posting, in the form of an `<img>` tag wrapped in `<figure>` tags.
+This repository contains a subset of a Ruby on Rails app. There are 3 models.
+`Articles` are a type of `Posting`. Other types of Postings include `Questions` and `ProductReviews`. 
+Postings have a `body` attribute. The contents of the Posting is stored as raw html. Some Postings have images embedded within the text of the Posting, in the form of an `<img>` tag wrapped in `<figure>` tags.
+
+The repo also contains one view file and one spec file.
 
 ## The Task
 Throughout the site, "posting snippets" are displayed, with links to read the full Posting. The product manager has decided that when an Article contains an image, its snippet should display the image above the snippet body. If an Article contains multiple images, only the first image should be displayed.
