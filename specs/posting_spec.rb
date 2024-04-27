@@ -4,6 +4,8 @@ require 'rails_helper'
 
 RSpec.describe Posting, type: :model do
   describe '.article_with_image' do
+    # We cover only Article model. But we don check other model. Additionaly we didn't checked relation our Posting with useauthor and editor
+    # Important to have another context for not happy case
     posting_body =  "<p>Hi dear community members,</p>\r\n<p><strong>Spotlight #3</strong>"\
                     "is our latest bi-weekly community digest for you. It covers Cybersecurity, "\
                     "IT and DevOps topics<strong>. </strong>Check it out, join discussions and share "\

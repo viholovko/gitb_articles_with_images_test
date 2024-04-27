@@ -1,6 +1,10 @@
+/ # It is a bad practice to do any model queries in views.
+/ # When we remove the logic from model to some helper or presenter, we could reuse it here as simply article_with_image
 -image = posting.article_with_image
+/ # if image.present? use much better because object can be empty
 -if image
   figure id="img_#{posting.id}"
+    / # more better to replace to separate component. In feature this code can grow and it will be mo dificult to support. Additionaly this block can be use separately.
     img src="#{image['src']}" alt="#{image['alt'] || posting.title}" data-image="#{image['data-image']}"
 .teaser id="teaser_#{posting.id}"
   => posting_snippet(posting) # uses HTML_Truncator gem and calls .html_safe on the output
